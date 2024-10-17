@@ -1,0 +1,11 @@
+MH;TC;PALLET;HEM;SPOT1;SPOT2;DISP1;DISP2;STUD;SHUTTLE;TURNTABLE;FIXT1;FIXT2
+
+Manifolds
+Robots base
+water saver
+Io blocks
+switches
+Oper box
+tturn table
+safe io block 12/4
+

@@ -1,0 +1,34 @@
+﻿<Window x:Class="VC_Validation_Tracker_Generator.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:VC_Validation_Tracker_Generator"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="720" Width="1280" ResizeMode="NoResize">
+    <Viewbox>
+        <Grid>
+            <Border Margin="20,20,20,20" Background="#0C000000" CornerRadius="50">
+                <Grid>
+                    <Label Content="CiM VC Validation Tracker Generator v1.00" VerticalAlignment="Bottom" Margin="0,0,356,343" FontWeight="Bold" FontSize="16" HorizontalAlignment="Right" Width="384"/>
+                    <Label Content="Select header files path:" HorizontalAlignment="Right" Margin="0,0,597,309" VerticalAlignment="Bottom" Width="136" Padding="0,0,0,0" />
+                    <TextBox Margin="0,90,383,286" Height="18" x:Name="header_path_search" Text="C:\Users\BryanJoseMaldonadoGa\source\repos\VC Validation Tracker Generator\assets\Header Files" FontSize="7" VerticalContentAlignment="Center" FontStyle="Italic" Padding="5,0,0,0" HorizontalAlignment="Right" Width="350" FontFamily="Arial" TextChanged="header_path_search_TextChanged"/>
+                    <Label Content="Select where to save xml file:" HorizontalAlignment="Right" Margin="0,0,558,249" VerticalAlignment="Bottom" Width="175" Padding="0,0,0,0" />
+                    <TextBox Margin="0,150,383,226" Height="18" x:Name="save_file_path" Text="C:\Users\BryanJoseMaldonadoGa\Desktop\test.xml" FontSize="7" VerticalContentAlignment="Center" FontStyle="Italic" Padding="5,0,0,0" HorizontalAlignment="Right" Width="350" FontFamily="Arial" TextChanged="header_path_search_TextChanged"/>
+                    <Button Margin="377,150,363,0" Width="20" x:Name="save_path_btn" Height="18" VerticalAlignment="Top" Click="save_path_btn_Click"/>
+                    <Button Margin="377,90,363,0" Width="20" x:Name="header_path_search_btn" Height="18" VerticalAlignment="Top" Click="header_path_search_btn_Click"/>
+                    <Border Margin="0,332,630,0" CornerRadius="10" Background="White" BorderBrush="Black" BorderThickness=".5" HorizontalAlignment="Right" Width="100" Height="35" VerticalAlignment="Top">
+                        <Button Margin="4,4,4,4" Background="Transparent" BorderBrush="Transparent" Content="Generate" x:Name="generate_xml_btn" Click="generate_xml_btn_Click"/>
+                    </Border>
+                    <Border Margin="297,332,0,0" CornerRadius="10" Background="White" BorderBrush="Black" BorderThickness=".5" Height="35" VerticalAlignment="Top" HorizontalAlignment="Left" Width="100">
+                        <Button Margin="4,4,4,4" Background="Transparent" BorderBrush="Transparent" Content="Reset" x:Name="reset_btn"/>
+                    </Border>
+                    <Label Content="Event Log" HorizontalAlignment="Left" Margin="568,69,0,0" VerticalAlignment="Top" Width="80" Padding="0,0,0,0" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" />
+                    <Border Margin="483,90,0,0" Background="White" Width="250" CornerRadius="20" Height="277" VerticalAlignment="Top" HorizontalAlignment="Left">
+                        <TextBlock Margin="10,10,10,10" FontSize="7" Text="Standby..." x:Name="logger" UseLayoutRounding="False" TextWrapping="Wrap" ScrollViewer.CanContentScroll="True" MaxHeight="257" FontFamily="Arial" ScrollViewer.HorizontalScrollBarVisibility="Auto" ScrollViewer.VerticalScrollBarVisibility="Auto"/>
+                    </Border>
+                </Grid>
+            </Border>
+        </Grid>
+    </Viewbox>
+</Window>
