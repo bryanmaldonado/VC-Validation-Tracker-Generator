@@ -16,6 +16,8 @@ using Microsoft.Win32;
 using static System.Net.WebRequestMethods;
 using System.Xml.Linq;
 using System.Net;
+using Microsoft.WindowsAPICodePack.Dialogs;
+using System.Windows;
 
 namespace VC_Validation_Tracker_Generator.Classes
 {
@@ -25,13 +27,13 @@ namespace VC_Validation_Tracker_Generator.Classes
         {
             int iterator = 0;
 
+            path = Directory.GetParent(path).ToString();
             //Returns an array of file paths
             string[] filePaths = Directory.GetFiles(@$"{path}", "Signal Header*.xlsm",
                                          SearchOption.TopDirectoryOnly);
 
             foreach (string filePath in filePaths)
             {
-                
                 iterator++;
             } 
             return filePaths;
@@ -228,17 +230,16 @@ namespace VC_Validation_Tracker_Generator.Classes
             return files;
         }
 
-        public string GetFilePathSaved()
+        public string GetFilePathSaved(TextBlock logger)
         {
             string path = string.Empty;
-
-            var saveFileDialog = new SaveFileDialog();
-
-            saveFileDialog.ShowDialog();
-
-            if (saveFileDialog.FileName != string.Empty)
+            CommonOpenFileDialog dialog = new CommonOpenFileDialog();
+            dialog.InitialDirectory = "C:\\Users";
+            dialog.IsFolderPicker = true;
+            if (dialog.ShowDialog() == CommonFileDialogResult.Ok)
             {
-                path = saveFileDialog.FileName;
+                path = dialog.FileName;
+                LogAppender(logger, $"File will be stored at {path}.");
             }
 
             return path;

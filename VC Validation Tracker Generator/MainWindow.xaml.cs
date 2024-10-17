@@ -39,9 +39,7 @@ namespace VC_Validation_Tracker_Generator
         private void generate_xml_btn_Click(object sender, RoutedEventArgs e)
         {
             Configuration[]? configs;
-            //Fetch Files in Headers  Path
-            files = utilities.FetchFiles(header_path_search, logger);
-
+            
             //Extract Data From Files
             if (files != null)
             {
@@ -70,12 +68,26 @@ namespace VC_Validation_Tracker_Generator
 
         private void header_path_search_btn_Click(object sender, RoutedEventArgs e)
         {
+            string path = string.Empty;
 
+            var openFileDialog = new OpenFileDialog();
+
+            openFileDialog.ShowDialog();
+
+            if (openFileDialog.FileName != string.Empty)
+            {
+                path = openFileDialog.FileName;
+            }
+
+            header_path_search.Text = path;
+            //Fetch Files in Headers  Path
+            files = utilities.FetchFiles(header_path_search, logger);
         }
 
         private void save_path_btn_Click(object sender, RoutedEventArgs e)
         {
-            fileSavePath = utilities.GetFilePathSaved();
+            fileSavePath = utilities.GetFilePathSaved(logger);
+            save_file_path.Text = fileSavePath.ToString();
         }
     }
 }

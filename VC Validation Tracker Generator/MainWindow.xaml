@@ -12,9 +12,9 @@
                 <Grid>
                     <Label Content="CiM VC Validation Tracker Generator v1.00" VerticalAlignment="Bottom" Margin="0,0,356,343" FontWeight="Bold" FontSize="16" HorizontalAlignment="Right" Width="384"/>
                     <Label Content="Select header files path:" HorizontalAlignment="Right" Margin="0,0,597,309" VerticalAlignment="Bottom" Width="136" Padding="0,0,0,0" />
-                    <TextBox Margin="0,90,383,286" Height="18" x:Name="header_path_search" Text="C:\Users\BryanJoseMaldonadoGa\source\repos\VC Validation Tracker Generator\assets\Header Files" FontSize="7" VerticalContentAlignment="Center" FontStyle="Italic" Padding="5,0,0,0" HorizontalAlignment="Right" Width="350" FontFamily="Arial" TextChanged="header_path_search_TextChanged"/>
+                    <TextBox Margin="0,90,383,286" Height="18" x:Name="header_path_search" FontSize="7" VerticalContentAlignment="Center" FontStyle="Italic" Padding="5,0,0,0" HorizontalAlignment="Right" Width="350" FontFamily="Arial" TextChanged="header_path_search_TextChanged"/>
                     <Label Content="Select where to save xml file:" HorizontalAlignment="Right" Margin="0,0,558,249" VerticalAlignment="Bottom" Width="175" Padding="0,0,0,0" />
-                    <TextBox Margin="0,150,383,226" Height="18" x:Name="save_file_path" Text="C:\Users\BryanJoseMaldonadoGa\Desktop\test.xml" FontSize="7" VerticalContentAlignment="Center" FontStyle="Italic" Padding="5,0,0,0" HorizontalAlignment="Right" Width="350" FontFamily="Arial" TextChanged="header_path_search_TextChanged"/>
+                    <TextBox Margin="0,150,383,226" Height="18" x:Name="save_file_path" VerticalContentAlignment="Center" FontSize="7" FontStyle="Italic" Padding="5,0,0,0" HorizontalAlignment="Right" Width="350" FontFamily="Arial" TextChanged="header_path_search_TextChanged"/>
                     <Button Margin="377,150,363,0" Width="20" x:Name="save_path_btn" Height="18" VerticalAlignment="Top" Click="save_path_btn_Click"/>
                     <Button Margin="377,90,363,0" Width="20" x:Name="header_path_search_btn" Height="18" VerticalAlignment="Top" Click="header_path_search_btn_Click"/>
                     <Border Margin="0,332,630,0" CornerRadius="10" Background="White" BorderBrush="Black" BorderThickness=".5" HorizontalAlignment="Right" Width="100" Height="35" VerticalAlignment="Top">
