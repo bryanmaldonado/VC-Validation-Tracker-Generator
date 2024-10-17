@@ -238,7 +238,7 @@ namespace VC_Validation_Tracker_Generator.Classes
             dialog.IsFolderPicker = true;
             if (dialog.ShowDialog() == CommonFileDialogResult.Ok)
             {
-                path = dialog.FileName;
+                path = dialog.FileName + "\\vc_checklist.xml";
                 LogAppender(logger, $"File will be stored at {path}.");
             }
 

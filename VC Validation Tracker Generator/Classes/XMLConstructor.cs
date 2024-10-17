@@ -32,6 +32,7 @@ namespace VC_Validation_Tracker_Generator.Classes
         public void XMLSaveFile(string filePath)
         {
             //Append nodes to root and save file
+            Debug.WriteLine(filePath);
             new XDocument(srcTree).Save(filePath);
         }
 
